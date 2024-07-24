@@ -1,0 +1,25 @@
+name: Sync to Hugging Face
+
+on:
+  push:
+    branches:
+      - main  # or your default branch name
+
+jobs:
+  sync_to_huggingface:
+    name: Sync to Hugging Face
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sync to Hugging Face
+        uses: nateraw/huggingface-sync-action@v0.0.5
+        with:
+          # The github repo you are syncing from. Required.
+          github_repo_id: 'loukik2022/Image-to-Text'
+          # The Hugging Face repo id you want to sync to. (ex. 'username/reponame')
+          # A repo with this name will be created if it doesn't exist. Required.
+          huggingface_repo_id: 'Loukik/Image-to-Text'
+          # Hugging Face token with write access. Required.
+          hf_token: ${{ secrets.Image-to-Text }}
+          repo_type: 'space'
+          private: false
+          space_sdk: 'gradio'
