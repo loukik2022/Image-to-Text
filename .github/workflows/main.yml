@@ -19,7 +19,7 @@ jobs:
           # A repo with this name will be created if it doesn't exist. Required.
           huggingface_repo_id: 'Loukik/Image-to-Text'
           # Hugging Face token with write access. Required.
-          hf_token: ${{ secrets.Image-to-Text }}
+          hf_token: ${{ secrets.HF_TOKEN }}
           repo_type: 'space'
           private: false
           space_sdk: 'gradio'
