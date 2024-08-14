@@ -31,6 +31,7 @@ Image Captioning using ResNet50 and LSTM in Pytorch
 
 - Training loss = 0.3914
 - Validation loss = 0.3942
+- Average BLEU Score = 0.4112
 
 ![alt text](loss.png)
 
